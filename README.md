@@ -1,3 +1,9 @@
+# Name : Srirag Vuppala
+# Class: CSC 307 - 03
+# Prof: BJ Klingenberg
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
