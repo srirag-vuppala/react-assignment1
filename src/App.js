@@ -10,7 +10,9 @@ class App extends Component {
   removeCharacter = index => {
     const { characters } = this.state
 
-    this.makeDeleteCall(characters[index])
+    //this.makeDeleteCall(characters[index])
+    axios.delete('http://localhost:5000/users', {data : characters[index]})
+
 
     this.setState({ 
       characters: characters.filter((character, i) => {
@@ -63,7 +65,7 @@ class App extends Component {
     this.makePostCall(character).then( callResult => {
       character.id = callResult.id
       if (callResult.status === 201) {
-        this.setState({ characters: [...this.state.characters, character] });
+        this.setState({ characters: [...this.state.characters, callResult.data] });
       }
     });
   }
